@@ -1,0 +1,23 @@
+.content {
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 30px;
+  width: 870px;
+
+  // Mobile XS
+  @media (max-width: 599px) {
+    align-items: center;
+    justify-content: center;
+  }
+}

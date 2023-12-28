@@ -1,0 +1,30 @@
+.sidebar {
+  width: 270px;
+  flex-shrink: 0;
+
+  // Tablet
+  @media (max-width: 1199px) {
+    width: 250px;
+  }
+
+  // Mobile
+  @media (max-width: 899px) {
+    // display: none;
+
+    position: fixed;
+    width: 260px;
+    padding: 15px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: $white-color;
+    box-shadow: 0px 0px 20px 4px rgb(113, 113, 113);
+    overflow-y: scroll;
+    transform: translateX(-150%);
+    transition: transform 0.3s ease-in;
+  }
+}
+
+.sidebar--active {
+  transform: translateX(0);
+}

@@ -1,0 +1,25 @@
+$black-color: #000;
+$white-color: #fff;
+$text-color: #777;
+
+//! Icon toggle menu
+// Ширина и высота линии в иконке
+$lineWidth: 30px;
+$lineHeight: 4px;
+
+// Расстояние между линиями
+$innerMargin: 4px;
+
+// Радиус скругления
+$radiusIcon: 2px;
+
+// Цвет иконки
+$colorIcon: #11BE75;
+
+// Цвет иконки -- active
+$colorIconActive: red;
+
+// Размеры контейнера
+$width: $lineWidth;
+$height: $lineHeight * 3 + $innerMargin * 2;
+//! Icon toggle menu //

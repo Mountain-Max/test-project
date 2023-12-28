@@ -1,0 +1,61 @@
+.nav-icon {
+  width: $width;
+  height: $height;
+
+  display: flex;
+  align-items: center;
+
+  position: fixed;
+  z-index: 9;
+  transform: translate(-100%, -50%);
+}
+
+.nav-icon__middle {
+  position: relative;
+  width: $lineWidth;
+  height: $lineHeight;
+  background-color: $colorIcon;
+  border-radius: $radiusIcon;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: $lineWidth;
+    height: $lineHeight;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+    background-color: $colorIcon;
+    border-radius: $radiusIcon;
+  }
+
+  &::before {
+    top: -($lineHeight + $innerMargin);
+  }
+
+  &::after {
+    top: $lineHeight + $innerMargin;
+  }
+}
+
+/* Active state */
+
+.nav-icon.nav-icon--active .nav-icon__middle {
+  background-color: transparent;
+
+  &::before,
+  &::after {
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    background-color: $colorIconActive;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+    background-color: $colorIconActive;
+  }
+}
